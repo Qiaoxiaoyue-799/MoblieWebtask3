@@ -1,0 +1,159 @@
+/* 在CSS文件中引入antd的css文件 */
+@import '~antd/dist/antd.css';
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #fff;
+}
+.header{
+    height: 50px;
+}
+.header header{
+    width: 1200px;
+    line-height: 50px;
+    margin: 0 auto;
+}
+.header header a{
+    margin: 0 20px;
+    color: #fff;
+}
+.header img{
+    width: 120px;
+}
+
+/* content */
+.content{
+    width: 1200px;
+    margin: 30px auto 0;
+}
+.left{
+    width: 900px;
+    float: left;
+}
+.right{
+    width: 270px;
+    float: right;
+    height: 500px;
+    background-color: red;
+}
+@font-face {font-family: "iconfont";
+    src: url('//at.alicdn.com/t/font_1504531_6jncodjemgx.eot?t=1573545377280'); /* IE9 */
+    src: url('//at.alicdn.com/t/font_1504531_6jncodjemgx.eot?t=1573545377280#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+    url('//at.alicdn.com/t/font_1504531_6jncodjemgx.woff?t=1573545377280') format('woff'),
+    url('//at.alicdn.com/t/font_1504531_6jncodjemgx.ttf?t=1573545377280') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url('//at.alicdn.com/t/font_1504531_6jncodjemgx.svg?t=1573545377280#iconfont') format('svg'); /* iOS 4.1- */
+  }
+  
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-wode:before {
+    content: "\e66e";
+  }
+  
+  .icon-home:before {
+    content: "\e6a9";
+  }
+  
+  .icon-shangcheng:before {
+    content: "\e647";
+  }
+  
+  .icon-shouye:before {
+    content: "\e626";
+  }
+  
+  .icon-linggan:before {
+    content: "\e874";
+  }
+  
+  .icon-icon-test:before {
+    content: "\e604";
+  }
+
+  #grid{
+    height:120px;
+  }
+  #homehot{
+    height:200px;
+    background: #fff;
+  }
+  #homehot span{
+    display: block;
+    font-size:18px;
+    font-weight:600px;
+    margin-top:15px;
+    padding-left:5px;
+    border-left:5px solid rgb(90, 219, 236);
+  }
+  #linggan{
+    width:100%;
+    height:580px;
+    background:#eeeeee;
+  }
+  #imgout{
+    height:180px;
+    width:150px;
+    margin-left:10px;
+  }
+  #shopimg{
+    height:80px;
+    width:50px;
+    margin:0 auto;
+  }
+  #shopimg span{
+    font-size:11px;
+    padding:0;
+  }
+  #grid2{
+    height:150px;
+  }
+  #bottom{
+    height:180px;
+    background-color: #eeeeee;
+  }
+  #bottom1{
+    height:140px;
+    width:50%;
+    float: left;
+    background: #eeeeee;
+  }
+  #bottom2{
+    height:140px;
+    width:50%;
+    float: left;
+    background: #eeeeee;
+  }
+  #bottom1 img{
+    height: 100%;
+    width:100%;
+    padding:5px;
+  }
+  #bottom2 img{
+    height: 100%;
+    width:100%;
+    padding:5px;
+  }
+
+  #shoptop{
+    background-color:#74e7e6;
+    color:rgb(255, 255, 255);
+    /* position:absolute;
+    top:20; */
+  }
+  #sSearch{
+    height:40px;
+    width:100%;
+    margin:0 auto;
+  }
+  #hanbao{
+    float: left;
+  }
