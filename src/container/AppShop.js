@@ -49,7 +49,7 @@ export default class AppShop extends Component {
                         </div>
                     </div> */}
                 </NavBar>
-                <WingBlank>
+                {/* <WingBlank>
                     <i className="iconfont icon-fenlei" style={{fontSize:25,height:40,paddingTop:1,float:'left'}}></i>
                     <div id="sSearch" style={{margin:0}}>
                         <SearchBar
@@ -61,46 +61,51 @@ export default class AppShop extends Component {
                         onBlur={() => console.log('onBlur')}
                         />
                     </div>
-                </WingBlank>
-                <div style={{ height: '200px', backgroundColor: '#fff' }}>
-                    {/* <WingBlank style={{width:'100%',height:40}}>
-                        <i className="iconfont icon-fenlei" style={{fontSize:25,height:40,paddingTop:1,float:'left'}}></i>
-                        <div id="sSearch" style={{margin:0,width:'90%'}}>
-                            <SearchBar
-                            style={{margin:0,padding:0,border:'1px solid #eee',borderRadius:'5%'}}
-                            value={this.state.value}
-                            placeholder="输入关键字搜索"
-                            onSubmit={value => console.log(value, 'onSubmit')}
-                            onClear={value => console.log(value, 'onClear')}
-                            onBlur={() => console.log('onBlur')}
-                            />
-                        </div>
-                    </WingBlank> */}
-                    <Carousel
-                    autoplay={true}
-                    infinite
-                    beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-                    afterChange={index => console.log('slide to', index)}
-                    >
-                    {[1,2,3,4].map(val => (
-                        <a
-                        key={val}
-                        href="[图片]http://www.alipay.com"
-                        style={{ display: 'inline-block', width: '100%', height: 200}}
+                </WingBlank> */}
+                <div style={{ height: '200px', backgroundColor: '#fff',position:'relative'}}>
+                    <div style={{position:"absolute",top:0,width:'100%',height:"100px",zIndex:1}}>
+                        <WingBlank>
+                            <i className="iconfont icon-fenlei" style={{fontSize:25,color:'white',height:40,paddingTop:1,float:'left'}}></i>
+                            <div id="sSearch" style={{margin:0}}>
+                                <SearchBar
+                                style={{margin:0,padding:0,background:'none'}}
+                                value={this.state.value}
+                                placeholder="输入关键字搜索"
+                                onSubmit={value => console.log(value, 'onSubmit')}
+                                onClear={value => console.log(value, 'onClear')}
+                                onBlur={() => console.log('onBlur')}
+                                />
+                            </div>
+                        </WingBlank>
+                    </div>
+                    
+                        <Carousel
+                        autoplay={true}
+                        infinite
+                        beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
+                        afterChange={index => console.log('slide to', index)}
                         >
-                        <img
-                            src={`./images/s${val}.png`}
-                            alt=""
-                            style={{ width: '100%', height:200,verticalAlign: 'top' }}
-                            onLoad={() => {
-                            // fire window resize event to change height
-                            window.dispatchEvent(new Event('resize'));
-                            this.setState({ imgHeight: 'auto' });
-                            }}
-                        />
-                        </a>
-                    ))}
-                    </Carousel>
+                        {[1,2,3,4].map(val => (
+                            <a
+                            key={val}
+                            href="[图片]http://www.alipay.com"
+                            style={{ display: 'inline-block', width: '100%', height: 200}}
+                            >
+                            <img
+                                src={`./images/s${val}.png`}
+                                alt=""
+                                style={{ width: '100%', height:200,verticalAlign: 'top' }}
+                                onLoad={() => {
+                                // fire window resize event to change height
+                                window.dispatchEvent(new Event('resize'));
+                                this.setState({ imgHeight: 'auto' });
+                                }}
+                            />
+                            </a>
+                        ))}
+                        </Carousel>
+                    
+                        
                 </div>
                 {/* 以上是轮播图 */}
                 {/* 下面是十个分类 */}
